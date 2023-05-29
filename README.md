@@ -7,8 +7,8 @@ Aplicação 2: TO-DO
 
 - [X] Usuário → criar nova transação;
 - [ ] Usuário → obter resumo da conta;
-- [ ] Usuário → listar transações;
-- [ ] Usuário → visualizar uma transação única;
+- [X] Usuário → listar transações;
+- [X] Usuário → visualizar uma transação única;
 
 # Regras de negócios (RN)
 
