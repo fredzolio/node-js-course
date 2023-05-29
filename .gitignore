@@ -3,5 +3,3 @@ node_modules
 ./project-02/.env
 ./project-01/db.json
 ./project-01/.env
-./project-01/
-./project-01/node_modules
