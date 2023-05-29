@@ -1,5 +1,6 @@
 node_modules
-./aulas/project-02/db/app.db
+aulas/project-02/db/app.db
 *.db
 *.env
 !.env.example
+project-01
