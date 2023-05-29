@@ -1,5 +1,3 @@
 node_modules
-./project-02/db/app.db
+./project-02/db/app.db/
 ./project-02/.env
-./project-01/db.json
-./project-01/.env
