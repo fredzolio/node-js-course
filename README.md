@@ -6,7 +6,7 @@ Aplicação 2: TO-DO
 # Regras funcionais (RF)
 
 - [X] Usuário → criar nova transação;
-- [ ] Usuário → obter resumo da conta;
+- [X] Usuário → obter resumo da conta;
 - [X] Usuário → listar transações;
 - [X] Usuário → visualizar uma transação única;
 

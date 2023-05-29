@@ -6,8 +6,10 @@ import { z } from 'zod'
 export async function transactionsRoutes(app: FastifyInstance) {
   app.get('/', async () => {
     const transactions = await knex('transactions').select('*')
-    const result = await knex('transactions').count('id as count').first()
-    const count = result?.count || 0
+    const result: { count?: string } = await knex('transactions')
+      .count('id as count')
+      .first()
+    const count = parseInt(result?.count || '0')
     const totalOfTransactions = parseInt(count.toString())
     return {
       totalOfTransactions,
@@ -22,6 +24,13 @@ export async function transactionsRoutes(app: FastifyInstance) {
     const { id } = getTransactionParamsSchema.parse(request.params)
     const transaction = await knex('transactions').where('id', id).first()
     return { transaction }
+  })
+
+  app.get('/summary', async () => {
+    const summary = await knex('transactions')
+      .sum('amount', { as: 'amount' })
+      .first()
+    return { summary }
   })
 
   app.post('/', async (request, reply) => {
